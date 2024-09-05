@@ -3,42 +3,69 @@ body {
     height: 100vh;
     margin: 0;
 
-    display: grid;
-    grid-template-rows: 2fr 40rem 1fr;
-    grid-template-columns: 1fr 2fr 30rem 2fr 1fr;
+    display: flex;
+    align-items: end;
+}
+
+.indice {
+    position: absolute;
+    margin: 0;
+    top: calc(100vh - 9rem);
+    margin-left: 1rem;
+
+    grid-row: 1/2;
+    grid-column: 1/2;
+    z-index: 2;
+    text-align: center;
+    color: red;
+}
+
+.actual-page .indice {
+    top: 0;
+    left: 14rem;
+    color: black;
 }
 
 .page {
-
-    grid-row: 2/3;
-    grid-column: 3/4;
-
-    background-color: rebeccapurple;
-    height: 40rem;
-    width: 30rem;
-    margin:  auto;
+    /* background-color: rebeccapurple; */
+    height : 4rem;
+    width : 3rem;
+    margin: 0 auto 10rem;
 
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(22, 1fr);
+}
 
+.actual-page {
+    position: absolute;
+
+    top: calc(50vh / 2 - 11rem);
+    left: 50%;
+    margin-left: -15rem;
+
+    height: 40rem;
+    width: 30rem;
+    /* margin:  auto; */
+
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(22, 1fr);
 }
 
 @keyframes page-old-anim {
 
     /* animation: page-old-anim 1s forwards; */
-
+/* 
     35% {
 
-        height : 12rem;
-        width : 9rem;
-    }
+        height : 4rem;
+    width : 3rem;
+    } */
     
-    100% {
-        grid-column : 2/3;
-        
-        height : 12rem;
-        width : 9rem;
+    100% {        
+        height : 4rem;
+    width : 3rem;
     }
 }
 
@@ -159,6 +186,10 @@ button:hover {
 }
 
 #reset-div {
+    position: absolute;
+    bottom: 3rem;
+    right: calc(50vw - 1.5rem);
+
     grid-column: 3/4;
     margin: auto;
 }
@@ -168,7 +199,7 @@ button:hover {
 }
 
 @keyframes rotate-anim {
-    65% {
+    60% {
         transform: rotate(390deg);
     }
 
@@ -224,7 +255,8 @@ button:hover {
 
 #next-div {
     position: absolute;
-    top: calc(100vh / 2 - 3rem);
+    /* top: calc(100vh / 2 - 3rem); */
+    bottom: 3rem;
     right: calc(100vw / 2 - 22rem);
 }
 
@@ -262,7 +294,8 @@ button:hover {
 
 #back-div {
     position: absolute;
-    top: calc(100vh / 2 - 3rem);
+    /* top: calc(100vh / 2 - 3rem); */
+    bottom: 3rem;
     left: calc(100vw / 2 - 22rem);
 }
     
