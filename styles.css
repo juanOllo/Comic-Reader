@@ -3,9 +3,22 @@ body {
     height: 100vh;
     margin: 0 auto;
 
-    display: flex;
-    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
     width: 50rem;
+    height: 5rem;
+
+    max-height: 10vh;
+}
+
+.protector {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 8rem;
+    z-index: 2;
+    right: 0;
 }
 
 .indice {
@@ -18,7 +31,7 @@ body {
     grid-column: 1/2;
     z-index: 2;
     text-align: center;
-    color: red;
+    color: white;
 }
 
 .actual-page .indice {
@@ -33,40 +46,35 @@ body {
     width : 3rem;
     margin: 2.5rem auto 10rem;
 
+    grid-row: 1/2;
+
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(22, 1fr);
-}
-
-.protector {
-    position: absolute;
-    background-color: transparent;
-    width: 100%;
-    height: 8rem;
-    z-index: 2;
-    right: 0;
 }
 
 .actual-page {
     z-index: 3;
-
+    
     position: absolute;
-
+    
     top: calc(50vh / 2 - 7rem);
     left: 50%;
     margin-left: -15rem;
-
+    
     height: 40rem;
     width: 30rem;
     /* margin:  auto; */
-
+    
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(22, 1fr);
+    
+    max-height: 70vh;
 }
 
 @keyframes page-old-anim {
-
+    
     /* animation: page-old-anim 1s forwards; */
 /* 
     35% {
@@ -202,7 +210,7 @@ button:hover {
     bottom: 3rem;
     right: calc(50vw - 1.5rem);
 
-    grid-column: 3/4;
+    /* grid-column: 3/4; */
     margin: auto;
 }
 

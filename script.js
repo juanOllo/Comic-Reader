@@ -6,16 +6,13 @@ const backBtn = document.getElementById("back");
 
 cover[0].style.backgroundColor = "rgb(247, 241, 241)";
 
-// for (const x of cover) {
-//     x.addEventListener("mouseover",  () => {
-//             if (x.style.backgroundColor == "rgb(247, 241, 241)") {
-//                 x.style.animation = "show-anim 0.5s forwards";
-//                 x.style.color = "red";
-//                 reColor();
-//             }
-//         })
-
-// }
+//  FUNCIONES
+const gridFiller = () => {
+    for (let d = 0; d < page.length; d++) {
+        console.log("eaaa")
+        page[d].style.gridColumn = `${d+1} / ${d+2}`
+    }
+}
 
 const reColor = () => {
     if (cover[cover.length - 1].style.color !== "red"){
@@ -29,15 +26,35 @@ const reColor = () => {
     }
 }
 
-resetBtn.addEventListener("click", () => {
+const reload = () => {
+    cover = Array.from(document.querySelectorAll(".actual-page .cover"));
+    cover[0].style.backgroundColor = "rgb(247, 241, 241)";
+    
+    for (const x of cover) {
+        x.addEventListener("mouseover",  () => {
+            if (x.style.backgroundColor == "rgb(247, 241, 241)") {
+                x.style.animation = "show-anim 0.5s forwards";
+                x.style.color = "red";
+                reColor();
+            }
+        })
+    }
+}
 
+//  LLAMADO DE FUNCIONES
+gridFiller();
+reload();
+
+//  BUTTON ACTIONS
+resetBtn.addEventListener("click", () => {
+    
     for (const x of cover) {
         // x.style.animation = "hide-anim 0.5s forwards";
         x.style.animation = "none";
         x.style.color = "blue";
         x.style.backgroundColor = "white";
     }
-
+    
     cover[0].style.backgroundColor = "rgb(247, 241, 241)";
 })
 
@@ -45,10 +62,10 @@ nextBtn.addEventListener("click", () => {
     // page.style.height = "4rem";
     // page.style.width = "3rem";
     // page.style.animation = "page-old-anim 2s forwards";
-
+    
     const actualPage = document.querySelector(".actual-page");
     console.log(actualPage);
-
+    
     for (let i = 0; i < page.length - 1; i++) {
         if (page[i] === actualPage) {
             page[i].classList.remove("actual-page");
@@ -62,10 +79,10 @@ nextBtn.addEventListener("click", () => {
 backBtn.addEventListener("click", () => {
     // page.style.height = "40rem";
     // page.style.width = "30rem";
-
+    
     const actualPage = document.querySelector(".actual-page");
     console.log(actualPage);
-
+    
     for (let i = 1; i < page.length; i++) {
         if (page[i] === actualPage) {
             console.log("entroo");
@@ -78,20 +95,13 @@ backBtn.addEventListener("click", () => {
 })
 
 
+// for (const x of cover) {
+//     x.addEventListener("mouseover",  () => {
+//             if (x.style.backgroundColor == "rgb(247, 241, 241)") {
+//                 x.style.animation = "show-anim 0.5s forwards";
+//                 x.style.color = "red";
+//                 reColor();
+//             }
+//         })
 
-const reload = () => {
-    cover = Array.from(document.querySelectorAll(".actual-page .cover"));
-    cover[0].style.backgroundColor = "rgb(247, 241, 241)";
-
-    for (const x of cover) {
-        x.addEventListener("mouseover",  () => {
-                if (x.style.backgroundColor == "rgb(247, 241, 241)") {
-                    x.style.animation = "show-anim 0.5s forwards";
-                    x.style.color = "red";
-                    reColor();
-                }
-            })
-    }
-}
-
-reload();
+// }
