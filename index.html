@@ -1,139 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="styles.css" rel="stylesheet">
-</head>
-<body>
-
-    <div id="reset-div">
-        <button id="reset">
-            <div class="reset-arrow1">
-                <div class="reset-arrow2">
-                    <div class="reset-arrow3">
-                        <div class="reset-arrow4"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comic Reader</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="buttons">
+            <div id="full-back-div">
+                <button id="full-back">
+                    <div class="back-arrow">
+                        <div class="full-back-arrow"></div>
                     </div>
-                </div>
+                </button>
             </div>
-        </button>
-    </div>
-    <div id="next-div">
-        <button id="next">
-            <div class="next-arrow"></div>
-        </button>
-    </div>
-    <div id="back-div">
-        <button id="back">
-            <div class="back-arrow"></div>
-        </button>
-    </div>
-    
-    <div class="protector"></div>
+            <div id="back-div">
+                <button id="back">
+                    <div class="back-arrow"></div>
+                </button>
+            </div>
+            <div id="reset-div">
+                <button id="reset">
+                    <div class="reset-arrow1">
+                        <div class="reset-arrow2">
+                            <div class="reset-arrow3">
+                                <div class="reset-arrow4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div id="reset-all-div">
+                <button id="reset-all">
+                    <div class="reset-arrow1 red">
+                        <div class="reset-arrow2">
+                            <div class="reset-arrow3">
+                                <div class="reset-arrow4 red2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div id="next-div">
+                <button id="next">
+                    <div class="next-arrow"></div>
+                </button>
+            </div>
+            <div id="full-next-div">
+                <button id="full-next">
+                    <div class="next-arrow">
+                        <div class="full-next-arrow"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        
+        <div class="protector"></div>
 
-    <div class="page actual-page p01">
-
-
-        <h1 class="indice">1</h1>
-        <div class="divider b1"></div>
-        <div class="divider b2"></div>
-        <div class="divider b3"></div>
-        <div class="divider b4"></div>
+        <div id="body">
+            <div class="page p01 actual-page">
+                <h1 class="indice">1</h1>
+                <img src="https://www.silversprocket.net/wp-content/uploads/2017/09/catboycover-1350-400x584.jpg"/>
+                
+                <div class="cover p1-c1"></div>            
+            </div>
+            
+            <div class="page p02">
+                <h1 class="indice">2</h1>
+                
+                <img src="https://www.silversprocket.net/wp-content/uploads/2017/09/Catboy3-1200x1800.jpg"/>     
+                <div class="cover p2-c1"></div>
+                <div class="cover p2-c2"></div>
+                <div class="cover p2-c3"></div>
+                <div class="cover p2-c4"></div>          
+            </div>
+            
+            <div class="page p03">
+                <h1 class="indice">3</h1>
+                <img src="https://www.silversprocket.net/wp-content/uploads/2017/09/Catboy4-1200x1800.jpg"/>
+                
+                <div class="cover p3-c1"></div>
+                <div class="cover p3-c2"></div>
+                <div class="cover p3-c3"></div>
+                <div class="cover p3-c4"></div>
+            </div>
+            
+            <div class="page p04">
+                <h1 class="indice">4</h1>        
+                <img src="https://www.silversprocket.net/wp-content/uploads/2017/09/Catboy5-1200x1800.jpg"/>
+                
+                <div class="cover p4-c1"></div>
+                <div class="cover p4-c2"></div>
+                <div class="cover p4-c3"></div>
+                <div class="cover p4-c4"></div>
+            </div>
+            
+            <div class="page p05">
+                <h1 class="indice">5</h1>
+                <img src="https://www.silversprocket.net/wp-content/uploads/2017/09/Catboy6-1200x1800.jpg"/>
+                
+                <div class="cover p5-c1"></div>
+                <div class="cover p5-c2"></div>
+                <div class="cover p5-c3"></div>
+                <div class="cover p5-c4"></div>
+                <div class="cover p5-c5"></div>            
+                <div class="cover p5-c6"></div>            
+            </div>
+            
+            <div class="page p06">
+                <h1 class="indice">6</h1>
+                <img class="problema" src="https://www.silversprocket.net/wp-content/uploads/2017/09/Catboy7-1200x1800.jpg"/>    
+                
+                <div class="cover p6-c1"></div>            
+                <div class="cover p6-c2"></div>            
+                <div class="cover p6-c3"></div>            
+                <div class="cover p6-c4"></div>            
+            </div>
+        </div>
         
-        <div class="divider dh1"></div>
-        <div class="divider dh2"></div>
-        
-        <div class="divider dv1 rotate"></div>
-        <div class="divider dv2 rotate"></div>
-        
-        <div class="cover c1"></div>
-        <div class="cover c2"></div>
-        <div class="cover c3"></div>
-        <div class="cover c4"></div>
-        <div class="cover c5"></div>            
-    </div>
-
-    <div class="page p02">
-        <h1 class="indice">2</h1>
-        <div class="divider b1"></div>
-        <div class="divider b2"></div>
-        <div class="divider b3"></div>
-        <div class="divider b4"></div>
-        
-        <div class="divider dh1"></div>
-        <div class="divider dh2"></div>
-        
-        <div class="divider dv1 rotate"></div>
-        <div class="divider dv2 rotate"></div>
-        
-        <div class="cover c1"></div>
-        <div class="cover c2"></div>
-        <div class="cover c3"></div>
-        <div class="cover c4"></div>
-        <div class="cover c5"></div>            
-    </div>
-
-    <div class="page p03">
-        <h1 class="indice">3</h1>
-        <div class="divider b1"></div>
-        <div class="divider b2"></div>
-        <div class="divider b3"></div>
-        <div class="divider b4"></div>
-        
-        <div class="divider dh1"></div>
-        <div class="divider dh2"></div>
-        
-        <div class="divider dv1 rotate"></div>
-        <div class="divider dv2 rotate"></div>
-        
-        <div class="cover c1"></div>
-        <div class="cover c2"></div>
-        <div class="cover c3"></div>
-        <div class="cover c4"></div>
-        <div class="cover c5"></div>            
-    </div>
-
-    <div class="page p04">
-        <h1 class="indice">4</h1>
-        <div class="divider b1"></div>
-        <div class="divider b2"></div>
-        <div class="divider b3"></div>
-        <div class="divider b4"></div>
-        
-        <div class="divider dh1"></div>
-        <div class="divider dh2"></div>
-        
-        <div class="divider dv1 rotate"></div>
-        <div class="divider dv2 rotate"></div>
-        
-        <div class="cover c1"></div>
-        <div class="cover c2"></div>
-        <div class="cover c3"></div>
-        <div class="cover c4"></div>
-        <div class="cover c5"></div>            
-    </div>
-
-    <div class="page p05">
-        <h1 class="indice">5</h1>
-        <div class="divider b1"></div>
-        <div class="divider b2"></div>
-        <div class="divider b3"></div>
-        <div class="divider b4"></div>
-        
-        <div class="divider dh1"></div>
-        <div class="divider dh2"></div>
-        
-        <div class="divider dv1 rotate"></div>
-        <div class="divider dv2 rotate"></div>
-        
-        <div class="cover c1"></div>
-        <div class="cover c2"></div>
-        <div class="cover c3"></div>
-        <div class="cover c4"></div>
-        <div class="cover c5"></div>            
-    </div>
-
-    <script src="./script.js"></script>
-</body>
-</html>
+        <script src="./script.js"></script>
+    </body>
+    </html>
