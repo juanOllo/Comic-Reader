@@ -1,6 +1,7 @@
 body {
     background-color: black;
     margin: 0;
+    box-sizing: border-box;
 }
 
 #body {    
@@ -15,6 +16,10 @@ body {
     /* grid-template-columns: repeat(auto-fill, minmax(0px, 6rem)); */
 }
 
+hr {
+    display: none;
+}
+
 #credits-box {
     position: absolute;
     height: 50vh;
@@ -26,6 +31,7 @@ body {
 }
 
 #credits {
+    /* background-color: green; */
     height: 50vh;
     width: 50vh;
     /* border: 2px solid green; */
@@ -41,12 +47,11 @@ body {
 
 #credits a {
     color: palevioletred;
-    text-decoration: none;
+    max-width: 100vw;
 }
 
 #credits a:hover {
-    text-decoration: underline;
-    scale: 1.05;
+    scale: 1.1;
 }
 
 #credits h1, #credits a {
@@ -58,16 +63,14 @@ body {
     position: absolute;
     height: 50vh;
     width: 33vw;
-    /* border: 2px solid orange; */
-    left: 0;
-    top: 25vh;
+    margin: 0;
     z-index: 10;
+    top: 25vh;
 }
 
 #project-information {
     height: 50vh;
     width: 50vh;
-    /* border: 2px solid green; */
     margin: auto;
     color: white;
 
@@ -78,6 +81,22 @@ body {
     text-align: center;
 }
 
+#juanollo {
+    color: crimson;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#juanollo:hover {
+    scale: 1.1;
+}
+
+#project-information span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 #project-information h2, 
 #project-information h3 {
     color: crimson;
@@ -86,7 +105,8 @@ body {
 #project-information h2, 
 #project-information h3,
 #credits h2,
-#credits h3 {
+#credits h3,
+#juanollo {
     font-family: "Fraunces", serif;
 }
 
@@ -146,10 +166,6 @@ body {
     grid-template-rows: repeat(22, 1fr);
 }
 
-/* .page:hover {
-    animation: reset-allpages-anim 0.5s forwards;
-} */
-
 @keyframes reset-pages-anim {
     35%{
         transform: translate(0, -1rem);
@@ -181,10 +197,6 @@ body {
     grid-template-rows: repeat(22, 1fr);
 }
 
-/* .actual-page:hover {
-    animation: next-page-anim 0.5s forwards;
-} */
-
 @keyframes next-page-anim {
     18% {
         translate: 2rem;
@@ -214,8 +226,8 @@ body {
 
 button {
     border-radius: 0.5rem;
-    /* border: none; */
-    border: 1px solid black;
+    border: none;
+    /* border: 1px solid black; */
     width: 3rem;
     height: 3rem;
     background-color: white;
@@ -531,19 +543,56 @@ button:hover {
     grid-column: 2/18;
 }
 
-#juanollo {
-    color: crimson;
-}
-
-#juanollo:hover {
-    animation: juanollo-anim 1s ease 0s infinite;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-@keyframes juanollo-anim {
-    50%{
-        color:chartreuse;
-        transform: rotate(360deg);
+@media only screen and (max-width : 900px) {
+    /* body{
+        background-color: gray;
+    } */
+    body {
+        width: 100vw;
+    }
+    #buttons {
+        width: 100vw;
+        justify-content: space-evenly;
+        bottom: 5vh;
+        left: 0;
+    }
+    button {
+        scale: 1.1;
+    }
+    #information *{
+        position: relative;
+        top: 0;
+    }
+    #information {
+        margin-top: calc(100vh - 5rem);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 10vh;
+    }
+    #project-information-box {
+        width: 100vw;
+        height: fit-content;
+    }
+    #project-information, #credits {
+        max-width: 100vw;
+        height: fit-content;
+    }
+    #credits-box {
+        width: 100vw; 
+    }
+    #credits {
+        max-width: 100vw; 
+    }
+    hr {
+        display: block;
+        width: 92vw;
+    }
+    .page {
+        margin-top: 0;
+        scale: 0.7;
+    }
+    .actual-page {
+        top: 3vh;
     }
 }
