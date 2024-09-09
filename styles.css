@@ -184,12 +184,14 @@ hr {
     
     position: absolute;
     
-    top: calc(50vh / 2 - 6rem);
-    left: 50%;
-    margin-left: -15rem;
+    top: calc(50vh - 30vh);
+    left: calc(50vw - 22.5vh);
+    /* margin-left: -15rem; */
     
     height: 40rem;
     width: 30rem;
+    max-height: 60vh;
+    max-width: 45vh;
     /* margin:  auto; */
     
     display: grid;
@@ -543,22 +545,7 @@ button:hover {
     grid-column: 2/18;
 }
 
-@media only screen and (max-width : 900px) {
-    /* body{
-        background-color: gray;
-    } */
-    body {
-        width: 100vw;
-    }
-    #buttons {
-        width: 100vw;
-        justify-content: space-evenly;
-        bottom: 5vh;
-        left: 0;
-    }
-    button {
-        scale: 1.1;
-    }
+@media only screen and (max-width : 1200px) {
     #information *{
         position: relative;
         top: 0;
@@ -588,11 +575,29 @@ button:hover {
         display: block;
         width: 92vw;
     }
-    .page {
+}
+
+@media only screen and (max-width : 900px) {
+    /* body{
+        background-color: gray;
+    } */
+    body {
+        width: 100vw;
+    }
+    #buttons {
+        width: 100vw;
+        justify-content: space-evenly;
+        bottom: 5vh;
+        left: 0;
+    }
+    button {
+        scale: 1.1;
+    }
+    /* .page {
         margin-top: 0;
         scale: 0.7;
     }
     .actual-page {
         top: 3vh;
-    }
+    } */
 }

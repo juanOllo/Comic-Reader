@@ -82,10 +82,18 @@ resetAllBtn.addEventListener("click", () => {
     }
     cover[0].style.backgroundColor = "rgb(247, 241, 241)";
     
-    for (let i = 0; i < page.length; i++) {
+    for (let i = 1; i < page.length; i++) {
         anim(page[i], `reset-pages-anim 0.5s forwards ${i / 30}s`);
         anim(page[i].children[0], "ae 1s ease");
     }
+
+    // 
+    const actualPage = document.querySelector(".actual-page");
+    
+    actualPage.classList.remove("actual-page");
+    page[0].classList.add("actual-page");
+    anim(page[0], "back-page-anim 0.4s ease");
+    // reload();
 })
 
 nextBtn.addEventListener("click", () => {
