@@ -99,7 +99,7 @@ resetAllBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
     const actualPage = document.querySelector(".actual-page");
     anim(nextBtn, "next-anim 0.3s ease");
-
+    anim(nextBtn.children[0], "next-children-anim 0.3s ease")
     
     for (let i = 0; i < page.length - 1; i++) {
         if (page[i] === actualPage) {
@@ -115,6 +115,7 @@ nextBtn.addEventListener("click", () => {
 backBtn.addEventListener("click", () => {
     const actualPage = document.querySelector(".actual-page");
     anim(backBtn, "next-anim 0.3s ease 0s 1 reverse");
+    anim(backBtn.children[0], "next-children-anim 0.3s ease")
     
     for (let i = 1; i < page.length; i++) {
         if (page[i] === actualPage) {

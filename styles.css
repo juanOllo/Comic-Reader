@@ -346,6 +346,15 @@ button:hover {
     }
 }
 
+@keyframes next-children-anim {
+    25%{
+        border-color: transparent;
+    }
+    75%{
+        border-color: transparent;
+    }
+}
+
 .next-arrow {
     position: relative;
     width: 0; 
@@ -545,7 +554,7 @@ button:hover {
     grid-column: 2/18;
 }
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1200px), only screen and (max-height : 610px ) {
     #information *{
         position: relative;
         top: 0;
@@ -570,6 +579,7 @@ button:hover {
     }
     #credits {
         max-width: 100vw; 
+        margin-bottom: 3rem;
     }
     hr {
         display: block;
@@ -600,4 +610,10 @@ button:hover {
     .actual-page {
         top: 3vh;
     } */
+    button:hover {
+        scale: 1.1;
+        border-radius: 0.2rem;
+        background-color: white;
+        cursor: pointer;
+    }
 }
